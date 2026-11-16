@@ -2,8 +2,6 @@
 
 An ESP32-connected smart agriculture prototype combining sensor monitoring, weather context, irrigation decision support, machine-learning experiments, and image-based weed detection. The project also includes a separately trained 30-minute soil-dryness research model contributed from the second repository.
 
-> **Important:** This is a student research prototype, not a certified irrigation controller. Model predictions are decision-support outputs. The separate dryness model uses a different dataset and input scale from the ESP32 sensors; it is deliberately isolated from live hardware inputs.
-
 ## Features
 
 - Streamlit dashboard for sensor status, irrigation monitoring, weather information, and model inspection.
