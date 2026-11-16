@@ -1,0 +1,11 @@
+SMART IRRIGATION HARDWARE INTEGRATION
+
+The Streamlit dashboard contains a persistent ESP32 USB-serial reader. It accepts JSON telemetry at 115200 baud, logs valid readings to the shared SQLite database at data/sensor_history.db, and marks readings stale after the configured timeout.
+
+Default serial port: /dev/cu.usbserial-0001 (Mac). Override with the ESP32_SERIAL_PORT environment variable on another machine (for example COM3 on Windows). Close Arduino Serial Monitor before running the dashboard.
+
+Pin assumptions in the supplied ESP32 sketch: soil analog outputs -> GPIO32 and GPIO33; water-level analog output -> GPIO34; rain module digital output -> GPIO27; DHT22 data -> GPIO4. Verify wiring and sensor output voltages before connecting. Do not feed 5V signals into ESP32 GPIO.
+
+The dashboard's irrigation outputs are advisory. Automatic pump actuation is not enabled by this cleaned repository. Do not connect a pump until a separately reviewed driver circuit, power supply, electrical isolation, and fail-safe control path are implemented and tested.
+
+Arduino IDE libraries: Adafruit DHT sensor library and Adafruit Unified Sensor. Python serial dependency: pyserial.

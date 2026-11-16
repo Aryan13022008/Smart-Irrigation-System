@@ -1,0 +1,14 @@
+streamlit
+pandas
+numpy
+scikit-learn==1.6.1
+torch
+joblib
+plotly
+requests
+ultralytics
+streamlit-webrtc
+av
+pyserial
+openpyxl
+pytest
